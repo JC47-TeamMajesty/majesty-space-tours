@@ -1,0 +1,86 @@
+.about {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    width: 20vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
+    place-content: center;
+    place-items: center;
+    margin: 20px;
+}
+
+.profile .imgContainer {
+    border-radius: 50%;
+    height: 15vw;
+    width: 15vw;
+}
+
+.profileGrid {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 100%;
+    place-content: center;
+    place-items: center;
+    gap: 20px;
+}
+
+.profile .button {
+    width: 90%;
+    margin: 0;
+    padding: 20px;
+}
+
+
+@media (max-width: 1000px) {
+    .profile {
+        width: 300px;
+    }
+
+    .profile .imgContainer {
+        height: 250px;
+        width: 250px;
+    }
+
+    .profileGrid {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .profileGrid {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 25%);
+    }
+
+    .imgContainer {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .profile {
+        width: 500px;
+    }
+
+    .profileGrid {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 25%);
+    }
+}
+
+@media (max-width: 400px) {
+    .profile .button {
+        padding: 20px 20px;
+    }
+}
